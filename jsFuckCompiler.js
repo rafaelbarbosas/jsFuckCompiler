@@ -48,6 +48,6 @@ map.h = `(${number(17)})[${fromString('toString')}](${number(18)})`;
 map.m = `(${number(22)})[${fromString('toString')}](${number(23)})`;
 map.C = `((()=>{})[${fromString('constructor')}](${fromString('return escape')})()(${map['\\']}))[${number(2)}]`;
 
-const compile = code => `(()=>{})[${fromString('constructor')}](${fromString(code)})()`;
+const compile = code => `[][${fromString("filter")}][${fromString("constructor")}]( ${fromString(code)} )()`;
 
 console.log(compile('console.log("Hello world!");'));
